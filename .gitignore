@@ -1,0 +1,9 @@
+#ignore vscode related stuff
+.vscode/
+
+#ignore java class files in /bin
+bin/
+
+#ignore java /lib
+lib/
+
