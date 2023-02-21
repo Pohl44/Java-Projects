@@ -6,8 +6,7 @@ public class GA {
 		// Daten.ausgabe();
 		
 		int popSize             = 400;
-		int anzahlIterationen   = 100
-		;
+		int anzahlIterationen   = 100;
 		Individuum[] pop        = new Individuum[popSize];
 		Individuum[] nachkommen = new Individuum[popSize];
 		Individuum best         = new Individuum();
@@ -45,7 +44,7 @@ public class GA {
 			pop        = nachkommen;
 			nachkommen = new Individuum[popSize];
 			bestIndividuumAktualisieren(pop, best);
-			// System.out.println(iter + " " + best.fitness);
+			System.out.println(iter + " " + best.fitness);
 		}
 		best.ausgabe();
 		

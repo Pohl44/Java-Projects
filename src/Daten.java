@@ -23,7 +23,7 @@ public class Daten {
 				kunden[i] = sc.nextInt();
 				kosten[i] = sc.nextInt();
 			}
-			vorSortieren();
+			sort();
 			sc.close();
 		}
 		catch(FileNotFoundException e){
@@ -33,21 +33,14 @@ public class Daten {
 	}
 
 
-	public static void vorSortieren(){
-		
-		for (int i = 0; i < anzahlProjekte; i++) {
-			verhältnis[i] = (kunden[i] / (double)kosten[i]);
-			sort();
-			
-		}
-		
-	}
-
 	public static void sort(){
 		double k;
 		int a, b;
 
 		for (int i = 0; i<anzahlProjekte; i++) {
+
+			verhältnis[i] = (kunden[i] / (double)kosten[i]);
+
 			for (int j = anzahlProjekte-1; j > 0; j--){
 				
 				if (verhältnis[j-1] < verhältnis[j]) {
@@ -61,22 +54,15 @@ public class Daten {
 					kunden[j-1] = a;
 					kosten[j] = kosten[j-1];
 					kosten[j-1] = b;
-
 				}
-
 			}
-
-
 		}
-
-		
 	}
 
-	
 	public static void ausgabe(){
 		System.out.println(anzahlProjekte);
 		System.out.println(budget);
-		// vorSortieren();
+
 		for(int i=0;i<anzahlProjekte;i++){
 			System.out.println(i + " " + kunden[i] + " " + kosten[i]);
 		}
