@@ -1,3 +1,4 @@
+package genetischerAlg;
 
 public class Individuum {
 	int[] bits;

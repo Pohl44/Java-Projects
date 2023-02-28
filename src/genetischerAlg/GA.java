@@ -1,3 +1,4 @@
+package genetischerAlg;
 import java.io.File;
 
 public class GA {
