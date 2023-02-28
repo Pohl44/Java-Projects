@@ -8,7 +8,7 @@ public class Hauptprogramm {
 	public static void main(String[] args) throws IOException {		
 		
 		//1. Trainingsdaten einlesen
-		Einlesen.einlesenVorlesungsbeispiele(new File("data\\wetter.txt"));
+		Einlesen.einlesenVorlesungsbeispiele(new File("wetter.txt"));
 				
 		//2. Netz aufbauen
 		Perzeptron p = new Perzeptron();
